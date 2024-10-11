@@ -2,7 +2,7 @@
 
 @section('content')
 <div class="p-8 container mx-auto">
-    <div class="max-w-xl mx-auto py-24">
+    <div class="max-w-xl mx-auto py-20">
         <h1 class="text-3xl font-extrabold mb-3">{{ isset($organizer) ? "Edit" : "Add" }} Organizer</h1>
         <form action="{{ isset($organizer) ? route('organizers.update', ['organizer' => $organizer->id]) : route('organizers.store') }}" method="POST">
             @csrf

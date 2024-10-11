@@ -2,7 +2,7 @@
 
 @section('content')
 <div class="p-8 container mx-auto">
-    <div class="max-w-xl mx-auto py-24">
+    <div class="max-w-xl mx-auto py-20">
         <h1 class="text-3xl font-extrabold mb-3">{{ isset($category) ? "Edit" : "Add" }} Category</h1>
         <form action="{{ isset($category) ? route('categories.update', ['category' => $category->id]) : route('categories.store') }}" method="POST">
             @csrf

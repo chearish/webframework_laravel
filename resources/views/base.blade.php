@@ -3,8 +3,12 @@
 <head>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
-    @vite('resources/css/app.css')
     
+    @vite('resources/css/app.css')
+    @yield('library-css')
+
+    @yield('custom-css')
+
     <title>Events</title>
     <link href="https://cdn.jsdelivr.net/npm/flowbite@2.5.2/dist/flowbite.min.css" rel="stylesheet" />
 
@@ -65,6 +69,8 @@
 
     @vite('resources/js/app.js')
     <script src="https://cdn.jsdelivr.net/npm/flowbite@2.5.2/dist/flowbite.min.js"></script>
+
+    @yield('library-js')
 </body>
 
 </html>

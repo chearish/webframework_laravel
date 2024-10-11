@@ -121,6 +121,10 @@ class EventController extends Controller
         $organizers = OrganizerEvent::where('active', 1)->orderBy('id', 'asc')->get();
         $categories = CategoryEvent::where('active', 1)->orderBy('id', 'asc')->get();
 
+        if ($event) {
+            $event->tags = explode(',', $event->tags);
+        }
+
         return view('event/form', compact('event', 'organizers', 'categories'));
     }
 

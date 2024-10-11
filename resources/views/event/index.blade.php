@@ -1,7 +1,17 @@
 @extends('base')
 
-@section('library-css')
-<link rel="stylesheet" href="https://cdn.datatables.net/2.1.8/css/dataTables.dataTables.min.css">
+@section('library-js')
+<script type="text/javascript" src="//cdn.datatables.net/2.1.8/js/dataTables.min.js" />
+@endsection
+
+@section('library-js')
+<script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+<script type="text/javascript" src="//cdn.datatables.net/2.1.8/js/jquery.dataTables.min.js"></script>
+<script type="text/javascript">
+    $(document).ready(function() {
+        $('#events-table').DataTable();
+    });
+</script>
 @endsection
 
 @section('content') 
@@ -56,9 +66,12 @@
 @endsection
 
 
-
-    <!-- <script>
-        $(document).ready(function() {
-            $('#events-table').DataTable();
-        });
-    </script> -->
+@section('library-js')
+<script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+<script type="text/javascript" src="//cdn.datatables.net/2.1.8/js/jquery.dataTables.min.js"></script>
+<script type="text/javascript">
+    $(document).ready(function() {
+        $('#events-table').DataTable();
+    });
+</script>
+@endsection
