@@ -30,6 +30,7 @@
                 </td>                
                 <td class="border px-4 py-2">{{$organizer->description}}</td>
                 <td class="border px-4 py-2 flex space-x-2">
+                    <a href="{{ route('organizers.show', ['organizer' => $organizer->id]) }}" class="bg-pink-500 hover:bg-yellow-700 text-white py-1 px-3 rounded text-sm">👁️ View</a>
                     <a href="{{ route('organizers.edit', ['organizer' => $organizer->id]) }}" class="bg-yellow-500 hover:bg-yellow-700 text-white py-1 px-3 rounded text-sm">✏️ Edit</a>
                     <form action="{{ route('organizers.destroy', ['organizer' => $organizer->id]) }}" method="POST" style="display: inline;">
                         @csrf
